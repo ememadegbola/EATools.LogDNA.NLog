@@ -9,7 +9,7 @@
         <projectUrl>https://github.com/RedBearSys/RedBear.LogDNA.NLog</projectUrl>
         <iconUrl>https://avatars3.githubusercontent.com/u/17988342?v=3&amp;amp;s=200</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>My package description.</description>
+        <description>LogDNA target for NLog.</description>
         <dependencies>
           <group targetFramework=".NETFramework4.5">
             <dependency id="RedBear.LogDNA" version="1.0.3" />
