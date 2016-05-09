@@ -6,7 +6,7 @@
         <title>NLog Target for LogDNA</title>
         <authors>Red Bear Systems Limited</authors>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
-        <projectUrl>https://github.com/RedBearSys/RedBear.LogDNA</projectUrl>
+        <projectUrl>https://github.com/RedBearSys/RedBear.LogDNA.NLog</projectUrl>
         <iconUrl>https://avatars3.githubusercontent.com/u/17988342?v=3&amp;amp;s=200</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>My package description.</description>
