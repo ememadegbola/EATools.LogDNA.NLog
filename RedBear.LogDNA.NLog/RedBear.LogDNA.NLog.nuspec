@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>RedBear.LogDNA.NLog</id>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <title>NLog Target for LogDNA</title>
         <authors>Red Bear Systems Limited</authors>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -12,7 +12,7 @@
         <description>LogDNA target for NLog.</description>
         <dependencies>
           <group targetFramework=".NETFramework4.5">
-            <dependency id="RedBear.LogDNA" version="1.0.5" />
+            <dependency id="RedBear.LogDNA" version="1.0.6" />
             <dependency id="NLog" version="4.3.3" />
           </group>
         </dependencies>

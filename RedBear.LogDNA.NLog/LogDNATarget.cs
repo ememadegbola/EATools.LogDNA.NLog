@@ -18,7 +18,6 @@ namespace RedBear.LogDNA.NLog
         /// <value>
         /// The name of the application.
         /// </value>
-        [RequiredParameter]
         public string ApplicationName { get; set; }
 
         /// <summary>
@@ -53,8 +52,9 @@ namespace RedBear.LogDNA.NLog
 
         protected override void Write(LogEventInfo logEvent)
         {
+            var logName = !string.IsNullOrEmpty(ApiClient.Config.ApplicationName) ? $"{ApiClient.Config.ApplicationName}: {logEvent.LoggerName}" : logEvent.LoggerName;
             var message = $"{logEvent.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss")} [{logEvent.Level.ToString().ToUpper()}] {logEvent.Message}";
-            ApiClient.AddLine(new LogLine(logEvent.LoggerName, message, logEvent.TimeStamp));
+            ApiClient.AddLine(new LogLine(logName, message, logEvent.TimeStamp));
         }
     }
 }
