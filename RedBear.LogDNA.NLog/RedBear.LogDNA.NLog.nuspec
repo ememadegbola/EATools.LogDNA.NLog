@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>RedBear.LogDNA.NLog</id>
+        <version>1.0.3</version>
+        <title>NLog Target for LogDNA</title>
+        <authors>Red Bear Systems Limited</authors>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/RedBearSys/RedBear.LogDNA</projectUrl>
+        <iconUrl>https://avatars3.githubusercontent.com/u/17988342?v=3&amp;amp;s=200</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>My package description.</description>
+        <dependencies>
+          <group targetFramework=".NETFramework4.5">
+            <dependency id="RedBear.LogDNA" version="1.0.0" />
+            <dependency id="NLog" version="4.3.3" />
+          </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\RedBear.LogDNA.NLog.dll" target="lib\RedBear.LogDNA.NLog.dll" />
+    </files>
+</package>
