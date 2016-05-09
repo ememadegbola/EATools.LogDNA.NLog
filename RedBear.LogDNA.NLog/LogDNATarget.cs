@@ -30,9 +30,18 @@ namespace RedBear.LogDNA.NLog
         [RequiredParameter]
         public string Key { get; set; }
 
+        public string HostName { get; set; }
+
         protected override void InitializeTarget()
         {
-            ApiClient.Connect(new Config(ApplicationName, Key)).Wait();
+            var config = new Config(ApplicationName, Key);
+
+            if (!string.IsNullOrEmpty(HostName))
+            {
+                config.HostName = HostName;
+            }
+
+            ApiClient.Connect(config).Wait();
             base.InitializeTarget();
         }
 
