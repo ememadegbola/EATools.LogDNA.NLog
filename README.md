@@ -1,4 +1,7 @@
 # RedBear.LogDNA.NLog
+
+**We are no longer using LogDNA ourselves, so we are no longer updating this repository and will not accept pull requests. Feel free to fork, however.**
+
 A LogDNA target for [NLog](http://nlog-project.org/).
 
 ## Getting Started
