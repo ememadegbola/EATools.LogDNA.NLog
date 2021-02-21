@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBear.LogDNA.NLog", "RedBear.LogDNA.NLog.csproj", "{713F30CC-968B-4837-AB37-A4B6F485539D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EATools.LogDNA.NLog", "EATools.LogDNA.NLog.csproj", "{713F30CC-968B-4837-AB37-A4B6F485539D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55BD1B54-C186-4DFB-AE41-291CE6AFA1C6}
 	EndGlobalSection
 EndGlobal

@@ -1,10 +1,11 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
+using RedBear.LogDNA;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RedBear.LogDNA.NLog
+namespace EATools.LogDNA.NLog
 {
     /// <summary>
     /// NLog target for LogDNA.

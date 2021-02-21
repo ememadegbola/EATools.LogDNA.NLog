@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>RedBear.LogDNA.NLog</id>
-        <version>1.0.7</version>
+        <id>EATools.LogDNA.NLog</id>
+        <version>2.0.0</version>
         <title>NLog Target for LogDNA</title>
-        <authors>Red Bear Systems Limited</authors>
+        <authors>Emem Adegbola</authors>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
-        <projectUrl>https://github.com/RedBearSys/RedBear.LogDNA.NLog</projectUrl>
-        <iconUrl>https://avatars3.githubusercontent.com/u/17988342?v=3&amp;amp;s=200</iconUrl>
+        <projectUrl>https://github.com/ememadegbola/EATools.LogDNA.NLog</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>LogDNA target for NLog.</description>
         <dependencies>
@@ -18,6 +17,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\RedBear.LogDNA.NLog.dll" target="lib\RedBear.LogDNA.NLog.dll" />
+        <file src="bin\Release\EATools.LogDNA.NLog.dll" target="lib\EATools.LogDNA.NLog.dll" />
     </files>
 </package>
