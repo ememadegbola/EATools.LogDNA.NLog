@@ -1,6 +1,4 @@
-# RedBear.LogDNA.NLog
-
-**We are no longer using LogDNA ourselves, so we are no longer updating this repository and will not accept pull requests. Feel free to fork, however.**
+# LogDNA.NLog
 
 A LogDNA target for [NLog](http://nlog-project.org/).
 
@@ -13,16 +11,11 @@ Install-Package RedBear.LogDNA.NLog
 ```
 
 Then you will need to configure NLog, either via a config file or via code, specifying as a minimum your LogDNA key:
-
 ```xml
-<configuration>
-  <configSections>
-    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
-  </configSections>
-  <nlog>
-  </nlog>
-</configuration>
 <nlog>
+  <extensions>
+    <add assembly="EATools.LogDNA.NLog"/>
+  </extensions>
   <targets>
     <target name="logDna" type="LogDNATarget" Key="your-logdna-key"/>
   </targets>
