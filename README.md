@@ -7,7 +7,7 @@ A LogDNA target for [NLog](http://nlog-project.org/).
 The easiest way to get started is to install the Nuget package:
 
 ```
-Install-Package RedBear.LogDNA.NLog
+Install-Package EATools.LogDNA.NLog
 ```
 
 Then you will need to configure NLog, either via a config file or via code, specifying as a minimum your LogDNA key:
