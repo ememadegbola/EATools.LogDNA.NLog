@@ -14,6 +14,9 @@ namespace RedBear.LogDNA.NLog
     // ReSharper disable once InconsistentNaming
     public class LogDNATarget : Target
     {
+        private IApiClient apiClient;
+        private ConfigurationManager config;
+
         /// <summary>
         /// Gets or sets the name of the application that's emitting the content that's sent to LogDNA.
         /// </summary>
@@ -37,7 +40,7 @@ namespace RedBear.LogDNA.NLog
 
         protected override void InitializeTarget()
         {
-            var config = new Config(ApplicationName, Key);
+            config = new ConfigurationManager(Key);
 
             if (!string.IsNullOrEmpty(HostName))
             {
@@ -49,24 +52,24 @@ namespace RedBear.LogDNA.NLog
                 config.Tags = Tags;
             }
 
-            ApiClient.Connect(config).Wait();
+            apiClient = new HttpApiClient(config);
+            apiClient.Connect();
             base.InitializeTarget();
         }
 
         protected override void CloseTarget()
         {
-            ApiClient.Disconnect();
+            apiClient.Disconnect();
             base.CloseTarget();
         }
 
         protected override void Write(LogEventInfo logEvent)
         {
-            var logName = !string.IsNullOrEmpty(ApiClient.Config.ApplicationName) ? $"{ApiClient.Config.ApplicationName}: {logEvent.LoggerName}" : logEvent.LoggerName;
             var message = $"{logEvent.TimeStamp:yyyy-MM-dd HH:mm:ss} {GetLevel(logEvent.Level)} {logEvent.Message}";
-            ApiClient.AddLine(new LogLine(logName, message, logEvent.TimeStamp));
+            apiClient.AddLine(new LogLine(ApplicationName, message, logEvent.TimeStamp));
         }
 
-        private string GetLevel(LogLevel level)
+        private static string GetLevel(LogLevel level)
         {
             if (level == LogLevel.Debug)
                 return "DEBUG";

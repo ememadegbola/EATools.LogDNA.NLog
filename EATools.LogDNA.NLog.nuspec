@@ -11,7 +11,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>LogDNA target for NLog.</description>
         <dependencies>
-          <group targetFramework=".NETFramework4.5">
+          <group targetFramework="net5.0">
             <dependency id="RedBear.LogDNA" version="1.0.8" />
             <dependency id="NLog" version="4.3.3" />
           </group>
