@@ -15,8 +15,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="EATools.LogDNA" Version="1.0.1" />
     <PackageReference Include="NLog" Version="4.7.7" />
-    <PackageReference Include="RedBear.LogDNA" version="2.1.2887" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

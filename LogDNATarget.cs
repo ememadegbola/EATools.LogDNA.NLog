@@ -1,7 +1,7 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
-using RedBear.LogDNA;
+using EATools.LogDNA;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -48,7 +48,7 @@ namespace EATools.LogDNA.NLog
                 config.HostName = HostName;
             }
 
-            if (Tags.Any())
+            if (Tags?.Any() == true)
             {
                 config.Tags = Tags;
             }
@@ -66,28 +66,11 @@ namespace EATools.LogDNA.NLog
 
         protected override void Write(LogEventInfo logEvent)
         {
-            var message = $"{logEvent.TimeStamp:yyyy-MM-dd HH:mm:ss} {GetLevel(logEvent.Level)} {logEvent.Message}";
-            apiClient.AddLine(new LogLine(ApplicationName, message, logEvent.TimeStamp));
-        }
-
-        private static string GetLevel(LogLevel level)
-        {
-            if (level == LogLevel.Debug)
-                return "DEBUG";
-
-            if (level == LogLevel.Trace)
-                return "TRACE";
-
-            if (level == LogLevel.Info)
-                return "INFO";
-
-            if (level == LogLevel.Warn)
-                return "WARN";
-
-            if (level == LogLevel.Error)
-                return "ERROR";
-
-            return "FATAL";
+            apiClient.AddLine(new LogLine(ApplicationName, logEvent.FormattedMessage, logEvent.TimeStamp)
+            {
+                Level = logEvent.Level.ToString().ToUpperInvariant(),
+                Metadata = logEvent.Properties
+            });
         }
     }
 }
