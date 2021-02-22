@@ -6,6 +6,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EATools.LogDNA.NLog</RootNamespace>
     <AssemblyName>EATools.LogDNA.NLog</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>LogDNA target for NLog</Description>
+    <Copyright></Copyright>
+    <RepositoryUrl>https://github.com/ememadegbola/EATools.LogDNA.NLog</RepositoryUrl>
+    <Company />
+    <Authors>Emem Adegbola</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NLog" Version="4.7.7" />
