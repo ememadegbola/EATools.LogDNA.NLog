@@ -13,6 +13,7 @@
     <Company />
     <Authors>Emem Adegbola</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EATools.LogDNA" Version="1.0.1" />
